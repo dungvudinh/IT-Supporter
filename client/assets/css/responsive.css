@@ -1,0 +1,37 @@
+/* tablet */
+@media (max-width: 1239px) {
+    .content__review-main-list-items{
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .content__review-main-list-items-right-rating,
+    .content__review-main-list-items-right-rating,
+    .content__review-main-list-items-right-cmt,
+    .content__review-main-list-items-right-name{
+        padding-left: 0;
+    }
+
+    .content__review-main-list-items-right-name{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .content__review-main{
+        padding: 0 100px;
+    }
+
+    .content__review-main-list-items-left-img{
+        height: 80px;
+        width: 80px;
+
+    }
+    
+    .content__review-main-list-items-left{
+        text-align: center;
+    }
+
+    .content__review-main-list-items-right{
+        text-align: center;
+    }
+}

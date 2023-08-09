@@ -1,0 +1,6 @@
+300 website cơ quan nhà nước, giáo dục bị cài link cờ bạc
+
+Khoảng 130 website với tên miền .gov.vn và 170 trang edu.vn chứa đường link quảng cáo cờ bạc, cá độ trái phép.
+Thống kê được ông Vũ Ngọc Sơn, Giám đốc công nghệ Công ty An ninh mạng NCS, cung cấp chiều 13/4 sau quá trình hỗ trợ một số cơ quan rà quét tình trạng bị cài cắm link độc hại.
+
+"Các website này đều sử dụng https, được chứng nhận 'chính chủ' của cơ quan nhà nước, đơn vị giáo dục. Điều này đặc biệt nguy hiểm bởi nếu chúng được dùng để phát tán các link lừa đảo, ăn cắp thông tin, người dùng rất dễ bị mắc bẫy", ông Vũ Ngọc Sơn đánh giá
