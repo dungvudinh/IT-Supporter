@@ -805,7 +805,7 @@ include('./connection.php');
                                     Facebook
                                 </div>
                                 <div class="footer__items-general-text">
-                                    https://www.facebook.com/itsupporter.haui
+                                    https://www.facebook.com/vudinhdung
                                 </div>
                             </div>
                         </div>

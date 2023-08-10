@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2023 at 03:43 AM
+-- Generation Time: Aug 10, 2023 at 05:47 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,7 +38,9 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `account_name`, `password`) VALUES
-(6, '0869370492', '144202');
+(6, '0869370492', '144202'),
+(7, '0869374974', '1'),
+(9, '0813072111', '1');
 
 -- --------------------------------------------------------
 
@@ -68,7 +70,8 @@ INSERT INTO `app_form_client` (`id`, `full_name`, `MaKhoa`, `MaBan`, `note`, `cr
 (1, 'Hoàng Thảo Mai', 1, 1, 'Bằng sự nhiệt huyết, em sẽ đóng góp và tạo ra   giá trị', '2023-06-05 07:00:00', 1, '0869370492', 'anhkho881@gmail.com', 1, 0),
 (2, 'Nguyễn Thị Dung ', 2, 2, 'em sẽ cố gắng hết mình', '2023-06-18 00:00:00', 1, '0869370492', 'dung@gmail.com', 1, 1),
 (3, 'Hoàng Văn Thắng ', 3, 3, 'Đồng hành cùng IT Supporter là 1 vinh dự đối với em', '2023-06-07 08:00:00', 1, '0869370492', 'hoang@gmail.com', 1, 1),
-(4, 'Hoàng Thảo Linh', 1, 2, 'hihi', '2023-06-07 06:00:00', 1, '0869370492', 'linh@gmail.com', 0, NULL);
+(4, 'Hoàng Thảo Linh', 1, 2, 'hihi', '2023-06-07 06:00:00', 1, '0869370492', 'linh@gmail.com', 1, NULL),
+(5, 'Vũ Huy Công ', 1, 1, 'ádasdasd', '2023-08-10 06:27:35', 1, '123456789', 'congml@gmail.com', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -164,16 +167,17 @@ CREATE TABLE `expenditure` (
   `payment` double NOT NULL,
   `title` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `create_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `unread` tinyint(1) NOT NULL
+  `unread` tinyint(1) NOT NULL,
+  `isConfirmed` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `expenditure`
 --
 
-INSERT INTO `expenditure` (`id`, `content`, `payment`, `title`, `create_at`, `unread`) VALUES
-(1, 'mua hoa :300,000đ.mua băng keo:30,000đ.', 330000, 'chi tiêu ngày 14/06/2023', '2023-06-14 10:18:06', 1),
-(2, 'mua thiệp:250,000đ.mua pháo:520,000đ.', 770000, 'Sự  kiện chào đón tân sinh viên K17 (23/06/2022)', '2023-06-14 14:19:01', 1);
+INSERT INTO `expenditure` (`id`, `content`, `payment`, `title`, `create_at`, `unread`, `isConfirmed`) VALUES
+(1, 'mua hoa :300,000đ.mua băng keo:30,000đ.', 330000, 'chi tiêu ngày 14/06/2023', '2023-06-14 10:18:06', 1, 1),
+(2, 'mua thiệp:250,000đ.mua pháo:520,000đ.', 770000, 'Sự  kiện chào đón tân sinh viên K17 (23/06/2022)', '2023-06-14 14:19:01', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -250,6 +254,28 @@ INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `image_url` varchar(100) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` varchar(1000) NOT NULL,
+  `create_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `image_url`, `title`, `content`, `create_at`) VALUES
+(3, '20230805150817.jpg', 'asd', 'asda', '2023-08-05 01:29:17'),
+(4, '20230805150850.jpg', 'asdas', 'asdas', '2023-08-05 01:30:50');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `repair_form`
 --
 
@@ -269,7 +295,7 @@ CREATE TABLE `repair_form` (
 --
 
 INSERT INTO `repair_form` (`id`, `full_name`, `sdt`, `tinh_trang`, `mo_ta`, `create_at`, `unread`, `repair_status`) VALUES
-(1, 'Nguyễn Thị Dung ', '0869370492', 'lap không lên nguồn', 'Mình đang dùng bình thường thì máy bị tắt nguồn. Mình đã cố gắng thử cắm sạc nhưng bất thành', '2023-06-06 07:00:00', 1, 3);
+(1, 'Nguyễn Thị Dung ', '0869370492', 'lap không lên nguồn', 'Mình đang dùng bình thường thì máy bị tắt nguồn. Mình đã cố gắng thử cắm sạc nhưng bất thành', '2023-06-06 07:00:00', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -291,7 +317,7 @@ CREATE TABLE `su_kien` (
 --
 
 INSERT INTO `su_kien` (`id`, `title`, `image_url`, `content`, `create_at`, `unread`) VALUES
-(1, 'Sự kiện chào đón tân sinh viên khóa K17', '144202.jpg', 'Chuỗi hoạt động chào mừng tân sinh viên khóa K17 được tổ chức tại cơ sở Hà Nam. Các trưởng ban chú ý phân công nhiệm vụ cho các thành viên.Đôn đốc để hoat động được diễn ra 1 cách tốt đẹp', '2023-06-05 14:00:00', 1);
+(1, 'Sự kiện chào đón tân sinh viên khóa K17', '20230621160630.jpg', 'Chuỗi hoạt động chào mừng tân sinh viên khóa K17 được tổ chức tại cơ sở Hà Nam. Các trưởng ban chú ý phân công nhiệm vụ cho các thành viên.Đôn đốc để hoat động được diễn ra 1 cách tốt đẹp', '2023-06-05 14:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -313,18 +339,22 @@ CREATE TABLE `users` (
   `MaKhoa` int(11) NOT NULL COMMENT '1(CNTT), 2(KTPM), 3(KHMT))',
   `phone_number` char(10) NOT NULL,
   `isPay` tinyint(1) NOT NULL,
-  `age` int(11) NOT NULL
+  `age` int(11) NOT NULL,
+  `num_of_noti` int(11) NOT NULL DEFAULT 0,
+  `num_of_repair` int(11) NOT NULL DEFAULT 0,
+  `num_of_budget` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`account_id`, `avatar`, `full_name`, `gender`, `MaCV`, `status`, `email`, `date_of_joining`, `MaBan`, `address`, `MaKhoa`, `phone_number`, `isPay`, `age`) VALUES
-(6, '20230615170656.jpg', 'Vũ Đình Dũng ', b'0', 1, b'1', 'anhkho881@gmail.com', '2021-03-27', 3, 'Hải Dương', 2, '0869370492', 1, 21),
-(7, '20230615222035.jpg', 'Hoàng Thị Thương', b'0', 2, b'1', 'hoangthuong@gmail.com', '2020-06-03', 1, 'Hải Phòng ', 3, '0869370952', 1, 21),
-(8, '20230615222154.jpg', 'Nguyễn Thị Huyền', b'0', 2, b'1', 'huyennguyen@gmail.com', '2021-06-20', 3, 'Bắc Giang', 1, '0869374974', 0, 20),
-(9, '20230615222307.jpg', 'Đoàn Thảo Trang', b'0', 3, b'1', 'trangdoan@gmail.com', '2022-06-05', 3, 'Thái Bình', 2, '0869374865', 1, 22);
+INSERT INTO `users` (`account_id`, `avatar`, `full_name`, `gender`, `MaCV`, `status`, `email`, `date_of_joining`, `MaBan`, `address`, `MaKhoa`, `phone_number`, `isPay`, `age`, `num_of_noti`, `num_of_repair`, `num_of_budget`) VALUES
+(6, '20230621100653.jpg', 'Vũ Đình Dũng', b'0', 1, b'1', 'anhkho881@gmail.com', '2021-03-27', 3, 'Hải Dương', 2, '0869370492', 1, 21, 0, 0, 0),
+(7, '20230615222035.jpg', 'Hoàng Thị Thương', b'0', 1, b'1', 'hoangthuong@gmail.com', '2020-06-03', 1, 'Hải Phòng ', 3, '0869370952', 1, 21, 0, 0, 0),
+(8, '20230615222154.jpg', 'Nguyễn Thị Huyền', b'0', 2, b'0', 'huyennguyen@gmail.com', '2021-06-20', 2, 'Bắc Giang', 1, '0869374974', 0, 20, 0, 0, 0),
+(9, '20230615222307.jpg', 'Đoàn Thảo Trang', b'0', 3, b'0', 'trangdoan@gmail.com', '2022-06-05', 3, 'Thái Bình', 2, '0869374865', 1, 22, 4, 0, 0),
+(10, '', 'Vũ Huy Công', b'1', 4, b'1', 'cong@gmail.com', '2020-08-04', 2, 'Hà Nội', 1, '0813072111', 1, 21, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -373,6 +403,12 @@ ALTER TABLE `khoa`
   ADD PRIMARY KEY (`MaKhoa`);
 
 --
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `repair_form`
 --
 ALTER TABLE `repair_form`
@@ -400,13 +436,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `app_form_client`
 --
 ALTER TABLE `app_form_client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `app_form_server`
@@ -439,6 +475,12 @@ ALTER TABLE `khoa`
   MODIFY `MaKhoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `repair_form`
 --
 ALTER TABLE `repair_form`
@@ -454,7 +496,7 @@ ALTER TABLE `su_kien`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

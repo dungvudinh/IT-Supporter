@@ -107,7 +107,7 @@ if(!isset($_COOKIE['phone_number']))  header("Location:./login.php");
                              
                          }
                          else if($permission_url != "0")
-                            $sql .= " WHERE  users.MaCV = ".(int)$permission_url."";
+                            $sql .= " WHERE users.MaCV = ".(int)$permission_url."";
                          else if($ban_url != "0")
                             $sql .= " WHERE  users.MaBan = ".(int)$ban_url."";
                          else if($status_url !='0')
