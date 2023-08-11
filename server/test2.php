@@ -36,6 +36,6 @@ if (toastTrigger) {
 }
 
 </script>
-<h1>Vu Huy Cong</h1>
+<h1>Vu Huy Cong CNTT</h1>
   </body>
 </html>
