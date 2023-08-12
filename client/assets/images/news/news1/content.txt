@@ -1,0 +1,6 @@
+ChatGPT vừa tạo ra phần mềm độc hại siêu tinh vi
+
+Nhà nghiên cứu bảo mật Forcepoint Aaron Mulgrew vừa tạo ra phần mềm độc hại zero-day chỉ bằng ChatGPT.
+Mulgrew được cho là đã yêu cầu ChatGPT viết các dòng mã độc riêng biệt. Sau khi quá trình hoàn tất, Mulgrew có thể biên dịch các chức năng riêng lẻ thành một chương trình đánh cắp dữ liệu thống nhất.
+Malware được tạo ra ngụy trang thành một ứng dụng bảo vệ màn hình tự động khởi chạy trên Windows, với khả năng lấy dữ liệu từ các tệp, chia nhỏ dữ liệu thành các phần nhỏ hơn ẩn trong hình ảnh và tải dữ liệu đó lên thư mục Google Drive.
+Mulgrew đã có thể tinh chỉnh và củng cố đoạn mã của mình bằng ChatGPT đến mức các thử nghiệm VirusTotal không thể phát hiện ra. Rất may, phần mềm độc hại này không được công khai. Đây chỉ là một thử nghiệm mà Mulgrew đang tiến hành

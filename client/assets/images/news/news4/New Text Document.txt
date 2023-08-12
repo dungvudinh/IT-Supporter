@@ -1,0 +1,3 @@
+FBI: Không nên dùng sạc điện thoại công cộng
+
+FBI đã cảnh báo người dùng không nên sạc điện thoại hoặc máy tính tại các điểm công cộng như sân bay, khách sạn và trung tâm mua sắm do nguy cơ bị nhiễm phần mềm theo dõi. FBI yêu cầu người dùng nên tự mang củ sạc và cắm vào ổ điện để tránh sử dụng điểm sạc miễn phí ở các điểm công cộng. FBI không đưa ra thông tin về những tình huống cụ thể đã xảy ra, nhưng đã làm giảm rủi ro về nguy cơ đó. Năm 2021, Ủy ban Truyền thông Liên bang Mỹ (FTC) đã đưa ra cảnh báo tương tự. Các thiết bị điện tử cắm vào dây USB công cộng có khả năng bị cài đặt phần mềm độc hại, giúp tin tặc thu thập dữ liệu như tài khoản và mật khẩu người dùng
