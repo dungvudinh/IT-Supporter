@@ -7,5 +7,4 @@
     mysqli_set_charset($connection, 'UTF8');
     if($connection -> connect_error)
         die("Connection fail" .$connection->connect_error);
-    //hdhdhdhd
 ?>
