@@ -58,9 +58,9 @@ if(!isset($_COOKIE['phone_number']))  header("Location:./login.php");
                      <div class="filter__item filter__by_status">
                      <p class ="title">Trạng thái</p>
                          <select name="status" id="">
-                                 <option value="0" <?php echo $_GET['status'] ==0 ? "selected" :""; ?>>Tất cả</option>
+                                 <option value="2" <?php echo $_GET['status'] ==2 ? "selected" :""; ?>>Tất cả</option>
                                  <option value="1" <?php echo $_GET['status'] ==1 ?  "selected" :""; ?>>Đang hoạt động</option>
-                                 <option value="2" <?php echo $_GET['status'] ==2 ? "selected" :""; ?>>Đã rời</option>
+                                 <option value="0" <?php echo $_GET['status'] ==0 ? "selected" :""; ?>>Đã rời</option>
                              </select>
                      </div>
                      <button type="submit" class= "filter__btn">
@@ -106,15 +106,35 @@ if(!isset($_COOKIE['phone_number']))  header("Location:./login.php");
                             //      $sql .= " WHERE full_name LIKE '%".$_POST['search']."%'";
                              
                          }
-                         else if($permission_url != "0")
+                        /*  else if($permission_url != "0")
                             $sql .= " WHERE users.MaCV = ".(int)$permission_url."";
                          else if($ban_url != "0")
                             $sql .= " WHERE  users.MaBan = ".(int)$ban_url."";
                          else if($status_url !='0')
                             $sql .= " WHERE status = ".(int)$status_url."";
                          else 
-                            $sql .= " WHERE users.MaCV = ".(int)$permission_url." AND users.MaBan = ".(int)$ban_url." AND status = ".(int)$status_url."";
-                         $result = $connection->query($sql);
+                            $sql .= " WHERE users.MaCV = ".(int)$permission_url." AND users.MaBan = ".(int)$ban_url." AND status = ".(int)$status_url.""; */
+                        // Bo loc 
+                        $permission= " users.MaCV = ".(int)$permission_url."" ;
+                         $ban= " users.MaBan = ".(int)$ban_url."";
+                         $status=" status = ".(int)$status_url."";
+                         if($permission_url !=="0" && $ban_url !=="0" && $status_url !=="2"){
+                            $sql .= " WHERE $permission AND $ban AND $status";
+                         }else if($permission_url !=="0" && $ban_url !=="0" && $status_url =="2"){
+                            $sql .= " WHERE $permission AND $ban ";
+                         }else if($permission_url !=="0" && $ban_url =="0" && $status_url !=="2"){
+                            $sql .= " WHERE $permission AND $status ";
+                         }else if($permission_url =="0" && $ban_url !=="0" && $status_url !=="2"){
+                            $sql .= " WHERE $ban AND  $status";
+                         }else if($permission_url !=="0" && $ban_url =="0" && $status_url =="2"){
+                            $sql .= " WHERE $permission" ;
+                         }else if($permission_url =="0" && $ban_url !=="0" && $status_url =="2"){
+                            $sql .= " WHERE $ban" ;
+                         }else if($permission_url =="0" && $ban_url =="0" && $status_url !=="2"){
+                            $sql .= " WHERE $status" ;
+                         }
+    
+                            $result = $connection->query($sql);
                          if(mysqli_num_rows($result) > 0)
                          {
                             while($matrix_array = mysqli_fetch_all($result, MYSQLI_ASSOC))
