@@ -75,6 +75,14 @@ include('./connection.php');
                             </a>
                         </li>
                     </div>
+                    <div class="header__list-items-container">
+                        <li class="header__list-items menu-review">
+                            <a href="#container__register" class="header__list-items-link">
+                                Gửi đánh giá
+                                <div class="header__list-items-link-restore"></div>
+                            </a>
+                        </li>
+                    </div>
                 </ul>
                 <div class="header__icon">
                     <div class="header__icon-search">
@@ -201,7 +209,7 @@ include('./connection.php');
                                         <!-- <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Stackfindover</a> -->
                                         </h1>
                                     </div>
-                                    <div class="formbg-outer">
+                                    <div class="formbg-outer_register">
                                         <div class="formbg">
                                             <div class="formbg-inner padding-horizontal--48">
                                                 <span class="padding-bottom--15">Đăng ký thành viên</span>
@@ -253,6 +261,78 @@ include('./connection.php');
                                                         </div>
                                                         <textarea name="note" id="" cols="30" rows="10"></textarea>
                                                     </div>
+                                                    <div class="field field-register padding-bottom--24">
+                                                        <button type="submit" name="submit">Đăng kí</button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="formbg-outer_review">
+                                        <div class="formbg">
+                                            <div class="formbg-inner padding-horizontal--48">
+                                                <span class="padding-bottom--15">Gửi đánh giá</span>
+                                                <form id="stripe-register">
+                                                    <div class="field padding-bottom--24">
+                                                        <label style="text-align: left;" for="name">Họ tên</label>
+                                                        <input type="text" name="name">
+                                                        <span class="error"></span>
+                                                    </div>
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="email">Email</label>
+                                                        </div>
+                                                        <input type="email" name="email">
+                                                        <span class="error"></span>
+                                                    </div> -->
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="sdt">Số điện
+                                                                thoại</label>
+                                                        </div>
+                                                        <input type="number" name="sdt">
+                                                        <span class="error"></span>
+                                                    </div> -->
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="khoa">Khoa</label>
+                                                        </div>
+                                                        <select name="khoa" id="">
+                                                            <option value="1">Công Nghệ Thông Tin</option>
+                                                            <option value="2">Khoa Học Máy Tính</option>
+                                                            <option value="3">Kĩ Thuật Phần Mềm</option>
+                                                        </select>
+                                                    </div> -->
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="ban">Ban mong
+                                                                muốn</label>
+                                                        </div>
+                                                        <select name="ban" id="">
+                                                            <option value="1">Ban Truyền Thông</option>
+                                                            <option value="2">Ban Sự Kiện</option>
+                                                            <option value="3">ban Kĩ Thuật</option>
+                                                        </select>
+                                                    </div> -->
+                                                    <div class="field padding-bottom--24">
+                                                        <input type="radio" name="star-number" value="1"/>
+                                                        <label>1 sao</label>
+                                                        <input type="radio" name="star-number" value="2"/>
+                                                        <label>2 sao</label>
+                                                        <input type="radio" name="star-number" value="3"/>
+                                                        <label>3 sao</label>
+                                                        <input type="radio" name="star-number" value="4"/>
+                                                        <label>4 sao</label>
+                                                        <input type="radio" name="star-number" value="5"/>
+                                                        <label>5 sao</label>
+                                                    </div>
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="note">Note</label>
+                                                        </div>
+                                                        <textarea name="note" id="" cols="30" rows="10"></textarea>
+                                                    </div> -->
                                                     <div class="field field-register padding-bottom--24">
                                                         <button type="submit" name="submit">Đăng kí</button>
                                                     </div>
