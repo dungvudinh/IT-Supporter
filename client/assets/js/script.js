@@ -12,14 +12,27 @@ for (var index in absoluteElement) {
 }
 
 var menuRegister= document.querySelector(".menu-register");
+const formReview  = document.querySelector('.formbg-outer_review');
+const formRegister = document.querySelector('.formbg-outer_register');
 var b = document.querySelector(".header__icon-bars-container");
 menuRegister.onclick = function (e) {
+  formRegister.classList.add('active');
+  formReview.classList.remove('active');
   Object.assign(b.style, {
     transform: "translateX(0)",
     transition: "transform .3s linear",
   });
 };
-
+var menuReview= document.querySelector(".menu-review");
+menuReview.onclick = function (e) {
+  formRegister.classList.remove('active');
+  formReview.classList.add('active');
+  console.log(formReview)
+  Object.assign(b.style, {
+    transform: "translateX(0)",
+    transition: "transform .3s linear",
+  });
+};
 var closesidebarElement = document.querySelector(
   ".header__icon-bars-container-close"
 );
