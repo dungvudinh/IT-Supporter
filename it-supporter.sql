@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 10, 2023 at 05:47 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Aug 19, 2023 at 07:39 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,7 +71,8 @@ INSERT INTO `app_form_client` (`id`, `full_name`, `MaKhoa`, `MaBan`, `note`, `cr
 (2, 'Nguyễn Thị Dung ', 2, 2, 'em sẽ cố gắng hết mình', '2023-06-18 00:00:00', 1, '0869370492', 'dung@gmail.com', 1, 1),
 (3, 'Hoàng Văn Thắng ', 3, 3, 'Đồng hành cùng IT Supporter là 1 vinh dự đối với em', '2023-06-07 08:00:00', 1, '0869370492', 'hoang@gmail.com', 1, 1),
 (4, 'Hoàng Thảo Linh', 1, 2, 'hihi', '2023-06-07 06:00:00', 1, '0869370492', 'linh@gmail.com', 1, NULL),
-(5, 'Vũ Huy Công ', 1, 1, 'ádasdasd', '2023-08-10 06:27:35', 1, '123456789', 'congml@gmail.com', 0, NULL);
+(5, 'Vũ Huy Công ', 1, 1, 'ádasdasd', '2023-08-10 06:27:35', 1, '123456789', 'congml@gmail.com', 0, NULL),
+(6, 'Ducle1', 2, 2, '2221442', '2023-08-16 23:03:32', 1, '14142', '411441@gmail.com', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -300,6 +301,31 @@ INSERT INTO `repair_form` (`id`, `full_name`, `sdt`, `tinh_trang`, `mo_ta`, `cre
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `id` int(11) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `Content` text NOT NULL,
+  `StarNumber` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`id`, `Name`, `Content`, `StarNumber`) VALUES
+(1, '353354', '533534', 5),
+(5, '45646', '474747', 5),
+(20, 'dydjyytrjytfyj', 'djjjjjjj322', 2),
+(21, 'duc le', 'asgag', 4),
+(22, 'dydjyytrjytfyj', 'wddww', 1),
+(23, 'wegweag', 'gesgsegse', 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `su_kien`
 --
 
@@ -415,6 +441,12 @@ ALTER TABLE `repair_form`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `su_kien`
 --
 ALTER TABLE `su_kien`
@@ -442,7 +474,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `app_form_client`
 --
 ALTER TABLE `app_form_client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `app_form_server`
@@ -485,6 +517,12 @@ ALTER TABLE `news`
 --
 ALTER TABLE `repair_form`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `su_kien`
