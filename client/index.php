@@ -273,68 +273,30 @@ include('./connection.php');
                                         <div class="formbg">
                                             <div class="formbg-inner padding-horizontal--48">
                                                 <span class="padding-bottom--15">Gửi đánh giá</span>
-                                                <form id="stripe-register">
+                                                <form id="stripe-review" method="post" action="send_review.php">
                                                     <div class="field padding-bottom--24">
-                                                        <label style="text-align: left;" for="name">Họ tên</label>
-                                                        <input type="text" name="name">
+                                                        <label style="text-align: left;" for="name1">Họ tên</label>
+                                                        <input type="text" name="name1">
                                                         <span class="error"></span>
                                                     </div>
-                                                    <!-- <div class="field padding-bottom--24">
-                                                        <div class="grid--50-50">
-                                                            <label style="text-align: left;" for="email">Email</label>
-                                                        </div>
-                                                        <input type="email" name="email">
-                                                        <span class="error"></span>
-                                                    </div> -->
-                                                    <!-- <div class="field padding-bottom--24">
-                                                        <div class="grid--50-50">
-                                                            <label style="text-align: left;" for="sdt">Số điện
-                                                                thoại</label>
-                                                        </div>
-                                                        <input type="number" name="sdt">
-                                                        <span class="error"></span>
-                                                    </div> -->
-                                                    <!-- <div class="field padding-bottom--24">
-                                                        <div class="grid--50-50">
-                                                            <label style="text-align: left;" for="khoa">Khoa</label>
-                                                        </div>
-                                                        <select name="khoa" id="">
-                                                            <option value="1">Công Nghệ Thông Tin</option>
-                                                            <option value="2">Khoa Học Máy Tính</option>
-                                                            <option value="3">Kĩ Thuật Phần Mềm</option>
-                                                        </select>
-                                                    </div> -->
-                                                    <!-- <div class="field padding-bottom--24">
-                                                        <div class="grid--50-50">
-                                                            <label style="text-align: left;" for="ban">Ban mong
-                                                                muốn</label>
-                                                        </div>
-                                                        <select name="ban" id="">
-                                                            <option value="1">Ban Truyền Thông</option>
-                                                            <option value="2">Ban Sự Kiện</option>
-                                                            <option value="3">ban Kĩ Thuật</option>
-                                                        </select>
-                                                    </div> -->
                                                     <div class="field padding-bottom--24">
-                                                        <input type="radio" name="star-number" value="1"/>
-                                                        <label>1 sao</label>
-                                                        <input type="radio" name="star-number" value="2"/>
-                                                        <label>2 sao</label>
-                                                        <input type="radio" name="star-number" value="3"/>
-                                                        <label>3 sao</label>
-                                                        <input type="radio" name="star-number" value="4"/>
-                                                        <label>4 sao</label>
-                                                        <input type="radio" name="star-number" value="5"/>
-                                                        <label>5 sao</label>
+                                                        <label style="text-align: left;" for="review1">Nhận xét</label>
+                                                        <textarea name="review1" rows="5" cols="0"></textarea>
+                                                        <span class="error"></span>
                                                     </div>
-                                                    <!-- <div class="field padding-bottom--24">
-                                                        <div class="grid--50-50">
-                                                            <label style="text-align: left;" for="note">Note</label>
-                                                        </div>
-                                                        <textarea name="note" id="" cols="30" rows="10"></textarea>
-                                                    </div> -->
+                                                    <div class="field padding-bottom--24">
+                                                        <label style="text-align: left;" for="quality1">Chất lượng</label>
+                                                        <select name="quality1">
+                                                            <option value="1">1 sao</option>
+                                                            <option value="2">2 sao</option>
+                                                            <option value="3">3 sao</option>
+                                                            <option value="4">4 sao</option>
+                                                            <option value="5">5 sao</option>
+                                                        </select>
+                                                        <span class="error"></span>
+                                                    </div>
                                                     <div class="field field-register padding-bottom--24">
-                                                        <button type="submit" name="submit">Đăng kí</button>
+                                                        <button type="submit" name="submit1">Gửi đánh giá</button>
                                                     </div>
 
                                                 </form>
@@ -486,38 +448,57 @@ include('./connection.php');
                                     </div>
                                 </li>
                             </ul>
-                            <ul class="col l-4 content__review-list">
-                                <li class="content__review-main-list-items">
-                                    <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi2.jpg" alt="nguoi2"
-                                            class="content__review-main-list-items-left-img">
-                                    </div>
-                                    <div class="content__review-main-list-items-right">
-                                        <div class="content__review-main-list-items-right-live">
-                                            Việt Nam
-                                        </div>
-                                        <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                        </div>
-                                        <div class="content__review-main-list-items-right-cmt">
-                                            Nhờ có CLB mà máy tính của mình đã được sửa. Cảm ơn CLB nhiều!!!!
-                                        </div>
-                                        <div class="content__review-main-list-items-right-name">
-                                            Đặng Hữu Thắng
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="col l-4 content__review-list">
+                             
+                                        <?php
+                                            $sql = "SELECT * FROM review LIMIT 20";
+                                            $result = $connection->query($sql);
+                                            while($data = mysqli_fetch_all($result, MYSQLI_ASSOC))
+                                            {
+                                                for($i = 0; $i< count($data); $i++)
+                                                {
+                                                    $x = (int)$data[$i]['StarNumber'];
+                                                    $randomValue = rand(1, 9);
+                                                    echo 
+                                                    '
+                                                    <ul class="col l-4 content__review-list">
+                                                    <li class="content__review-main-list-items">
+                                                        <div class="content__review-main-list-items-left">
+                                                            <img src="./assets/img/nguoi'.$randomValue.'.jpg" alt="nguoi'.$randomValue.'"
+                                                                class="content__review-main-list-items-left-img">
+                                                        </div>
+                                                        <div class="content__review-main-list-items-right">
+                                                            <div class="content__review-main-list-items-right-live">
+                                                                Việt Nam
+                                                            </div>
+                                                                <div class="content__review-main-list-items-right-rating">
+                                                    ';
+                                                    for ($i1 = 1; $i1 <= $x; $i1++)
+                                                    echo 
+                                                    '
+                                                            <i
+                                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                                    ';
+                                                    echo 
+                                                    '
+                                                        </div>
+                                                    ';
+                                                    echo 
+                                                    '
+                                                        <div class="content__review-main-list-items-right-cmt">
+                                                            '.$data[$i]['Content'].'
+                                                        </div>
+                                                        <div class="content__review-main-list-items-right-name">
+                                                            '.$data[$i]['Name'].'  
+                                                        </div>
+                                                        </div>
+                                                        </li>
+                                                    </ul>
+                                                    ';                        
+                                                }
+                                            } 
+                                        ?>
+                                    
+                            <!--<ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
                                         <img src="./assets/img/nguoi3.jpg" alt="nguoi3"
@@ -730,7 +711,7 @@ include('./connection.php');
                                         </div>
                                     </div>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
@@ -893,7 +874,7 @@ include('./connection.php');
                 </div>
             </footer>
         </div>
-
+       
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="./assets/js/script.js"></script>
         <script>
