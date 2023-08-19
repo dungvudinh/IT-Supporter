@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
+<?php
 include('./connection.php');
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/base.css">
@@ -86,9 +85,7 @@ include('./connection.php');
                 </ul>
                 <div class="header__icon">
                     <div class="header__icon-search">
-                        <svg class="header__icon-search-img" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            width="20px" height="19px" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+                        <svg class="header__icon-search-img" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20px" height="19px" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
                             <circle fill="none" stroke-width="1.5" stroke-miterlimit="10" cx="10.9" cy="9.5" r="8.4">
                             </circle>
                             <line fill="none" x1="5.4" y1="15.6" x2="5.4" y2="15.6"></line>
@@ -124,88 +121,76 @@ include('./connection.php');
                             <i class="fas fa-times header__icon-bars-container-close-icon"></i>
                         </div>
                         <div class="header__icon-bars-container-logo">
-                            <img src="./assets/img/logo-sidearea.png" alt="logosidebar"
-                                class="header__icon-bars-container-logo-img">
+                            <img src="./assets/img/logo-sidearea.png" alt="logosidebar" class="header__icon-bars-container-logo-img">
                         </div>
                         <div class="login-root">
-                            <div class="box-root flex-flex flex-direction--column"
-                                style="min-height: 100vh;flex-grow: 1;">
+                            <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
                                 <div class="loginbackground box-background--white padding-top--64">
                                     <div class="loginbackground-gridContainer">
                                         <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
-                                            <div class="box-root"
-                                                style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                                            <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
                                             </div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
-                                            <div class="box-root box-divider--light-all-2 animationLeftRight tans3s"
-                                                style="flex-grow: 1;"></div>
+                                            <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
                                             <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
-                                            <div class="box-root box-background--blue animationLeftRight"
-                                                style="flex-grow: 1;"></div>
+                                            <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
-                                            <div class="box-root box-background--gray100 animationLeftRight tans3s"
-                                                style="flex-grow: 1;"></div>
+                                            <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
-                                            <div class="box-root box-background--cyan200 animationRightLeft tans4s"
-                                                style="flex-grow: 1;"></div>
+                                            <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
-                                            <div class="box-root box-background--blue animationRightLeft"
-                                                style="flex-grow: 1;"></div>
+                                            <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
-                                            <div class="box-root box-background--gray100 animationRightLeft tans4s"
-                                                style="flex-grow: 1;"></div>
+                                            <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
                                         </div>
                                         <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
-                                            <div class="box-root box-divider--light-all-2 animationRightLeft tans3s"
-                                                style="flex-grow: 1;"></div>
+                                            <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <?php 
-                                        $nameErr = $emailErr = $genderErr = $sdtErr = "";
-                                        $name = $email = $sdt = "";
-                                        
-                                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                        if (empty($_POST["name"])) {
-                                            $nameErr = "Name is required";
-                                        } else {
-                                            $name = test_input($_POST["name"]);
-                                        }
-                                        
-                                        if (empty($_POST["email"])) {
-                                            $emailErr = "Email is required";
-                                        } else {
-                                            $email = test_input($_POST["email"]);
-                                        }
-                                            
-                                        if (empty($_POST["sdt"])) {
-                                            $sdt = "SDT is required";
-                                        } else {
-                                            $sdtErr = test_input($_POST["sdt"]);
-                                        }
-                                        
-                                        }
-                                    
-                                        function test_input($data) {
-                                        $data = trim($data);
-                                        $data = stripslashes($data);
-                                        $data = htmlspecialchars($data);
-                                        return $data;
-                                        }
-                                    ?>
-                                <div class="box-root padding-top--24 flex-flex flex-direction--column"
-                                    style="flex-grow: 1; z-index: 9;">
-                                    <div
-                                        class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+                                <?php
+                                $nameErr = $emailErr = $genderErr = $sdtErr = "";
+                                $name = $email = $sdt = "";
+
+                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                    if (empty($_POST["name"])) {
+                                        $nameErr = "Name is required";
+                                    } else {
+                                        $name = test_input($_POST["name"]);
+                                    }
+
+                                    if (empty($_POST["email"])) {
+                                        $emailErr = "Email is required";
+                                    } else {
+                                        $email = test_input($_POST["email"]);
+                                    }
+
+                                    if (empty($_POST["sdt"])) {
+                                        $sdt = "SDT is required";
+                                    } else {
+                                        $sdtErr = test_input($_POST["sdt"]);
+                                    }
+                                }
+
+                                function test_input($data)
+                                {
+                                    $data = trim($data);
+                                    $data = stripslashes($data);
+                                    $data = htmlspecialchars($data);
+                                    return $data;
+                                }
+                                ?>
+                                <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+                                    <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
                                         <!-- <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Stackfindover</a> -->
                                         </h1>
                                     </div>
@@ -294,7 +279,46 @@ include('./connection.php');
                                                             <option value="5">5 sao</option>
                                                         </select>
                                                         <span class="error"></span>
+                                                    </div> -->
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="khoa">Khoa</label>
+                                                        </div>
+                                                        <select name="khoa" id="">
+                                                            <option value="1">Công Nghệ Thông Tin</option>
+                                                            <option value="2">Khoa Học Máy Tính</option>
+                                                            <option value="3">Kĩ Thuật Phần Mềm</option>
+                                                        </select>
+                                                    </div> -->
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="ban">Ban mong
+                                                                muốn</label>
+                                                        </div>
+                                                        <select name="ban" id="">
+                                                            <option value="1">Ban Truyền Thông</option>
+                                                            <option value="2">Ban Sự Kiện</option>
+                                                            <option value="3">ban Kĩ Thuật</option>
+                                                        </select>
+                                                    </div> -->
+                                                    <div class="field padding-bottom--24">
+                                                        <input type="radio" name="star-number" value="1" />
+                                                        <label>1 sao</label>
+                                                        <input type="radio" name="star-number" value="2" />
+                                                        <label>2 sao</label>
+                                                        <input type="radio" name="star-number" value="3" />
+                                                        <label>3 sao</label>
+                                                        <input type="radio" name="star-number" value="4" />
+                                                        <label>4 sao</label>
+                                                        <input type="radio" name="star-number" value="5" />
+                                                        <label>5 sao</label>
                                                     </div>
+                                                    <!-- <div class="field padding-bottom--24">
+                                                        <div class="grid--50-50">
+                                                            <label style="text-align: left;" for="note">Note</label>
+                                                        </div>
+                                                        <textarea name="note" id="" cols="30" rows="10"></textarea>
+                                                    </div> -->
                                                     <div class="field field-register padding-bottom--24">
                                                         <button type="submit" name="submit1">Gửi đánh giá</button>
                                                     </div>
@@ -373,39 +397,47 @@ include('./connection.php');
                     Tin tức
                 </div>
                 <?php
-                    $sql = "SELECT * FROM news LIMIT 4";
-                    $result = $connection->query($sql);
-                    while($data = mysqli_fetch_all($result, MYSQLI_ASSOC))
-                    {
-                        for($i = 0; $i< count($data); $i++)
-                        {
-                            echo 
-                            '
+                $sql = "SELECT * FROM news LIMIT 4";
+                $result = $connection->query($sql);
+                while ($data = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
+                    for ($i = 0; $i < count($data); $i++) {
+                        echo
+                        '
                             <div class="content__main-event" >   
                             <div class="content__main-video">
                                 <div class="content__main-video-background">
-                                    <img src="../news_images/'.$data[$i]['image_url'].'" alt="skiing" class="content__main-video-background-img">
+                                    <img src="../news_images/' . $data[$i]['image_url'] . '" alt="skiing" class="content__main-video-background-img">
                                 </div>  
                             </div>
                             <div class="content__main-footer">
                                 <div class="content__main-footer-title">
-                                    '.$data[$i]['title'].'
+                                    ' . $data[$i]['title'] . '
                                 </div>
         
                                 <div class="content__main-footer-text">
-                                '.$data[$i]['content'].'
+                                ' . $data[$i]['content'] . '
                                 </div>
         
                             </div>
                         </div>
-                            ';                        
-                        }
-                    } 
+                            ';
+                    }
+                }
                 ?>
             </div>
-            <form class="content__main-button" method= "POST">
-                    <button  type='submit'>Load more</button>
-                </form>
+            <?php
+            $sql = "SELECT * FROM news";
+            $result = $connection->query($sql);
+            $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            $num_of_occurs = 0;
+            if (count($data) % 4 == 0) $num_of_occurs = floor(count($data) / 4) - 1;
+            else $num_of_occurs = floor(count($data) / 4);
+            ?>
+            <form class='content__main-button' method='POST'>
+                <button type='submit' class="content__main-button-load-more">Load more</button>
+            </form>
+
+
 
             <div id="container__review" class="content__review">
                 <div class="content__review-titles">
@@ -420,24 +452,18 @@ include('./connection.php');
                             <ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi1.jpg" alt="nguoi1"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi1.jpg" alt="nguoi1" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Dịch vụ rất tốt. Các bạn trong clb rất năng nổ, nhiệt huyết
@@ -501,24 +527,18 @@ include('./connection.php');
                             <!--<ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi3.jpg" alt="nguoi3"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi3.jpg" alt="nguoi3" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Một trong những dịch vụ sửa chữa tốt nhất mình từng sử dụng
@@ -532,24 +552,18 @@ include('./connection.php');
                             <ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi4.jpg" alt="nguoi4"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi4.jpg" alt="nguoi4" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Dịch vụ rất tốt mà còn không mất phí
@@ -563,24 +577,18 @@ include('./connection.php');
                             <ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi5.jpg" alt="nguoi5"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi5.jpg" alt="nguoi5" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Khách ruột của CLB từ lâu lắm rồi. Bất kể máy có vấn đề gì tôi cũng đều mang
@@ -595,24 +603,18 @@ include('./connection.php');
                             <ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi6.jpg" alt="nguoi5"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi6.jpg" alt="nguoi5" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Tôi muốn cảm ơn tới các bạn kỹ thuật viên ở CLB. Bạn rất lịch sự cùng với
@@ -627,22 +629,17 @@ include('./connection.php');
                             <ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi7.jpg" alt="nguoi7"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi7.jpg" alt="nguoi7" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Lấy máy về cái là phải online để cảm ơn CLB luôn. Cảm ơn các bạn vì đã rất
@@ -657,22 +654,17 @@ include('./connection.php');
                             <ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi8.jpg" alt="nguoi8"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi8.jpg" alt="nguoi8" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Nay mình thay màn hình. Anh trong câu lạc bộ tận tình dã man luôn, rất cảm
@@ -687,20 +679,16 @@ include('./connection.php');
                             <ul class="col l-4 content__review-list">
                                 <li class="content__review-main-list-items">
                                     <div class="content__review-main-list-items-left">
-                                        <img src="./assets/img/nguoi9.jpg" alt="nguoi9"
-                                            class="content__review-main-list-items-left-img">
+                                        <img src="./assets/img/nguoi9.jpg" alt="nguoi9" class="content__review-main-list-items-left-img">
                                     </div>
                                     <div class="content__review-main-list-items-right">
                                         <div class="content__review-main-list-items-right-live">
                                             Việt Nam
                                         </div>
                                         <div class="content__review-main-list-items-right-rating">
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
-                                            <i
-                                                class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
+                                            <i class="fas fa-star content__review-main-list-items-right-rating-icon"></i>
                                         </div>
                                         <div class="content__review-main-list-items-right-cmt">
                                             Nay mình đến sửa laptop ở cơ sở 2 thật sự rất là ưng. Từ trình độ chuyên môn
@@ -811,26 +799,24 @@ include('./connection.php');
                                     Các bài đăng gần đây
                                 </div>
                                 <?php
-                                    $sql = "SELECT * FROM news ORDER BY create_at DESC LIMIT 3";
-                                    $result = $connection->query($sql);
-                                    $currentDate = date('Y-m-d');   
-                                    while($data = mysqli_fetch_all($result, MYSQLI_ASSOC))
-                                    {
-                                        for($i = 0; $i< count($data); $i++)
-                                        {
-                                            $difference = strtotime($currentDate) - strtotime(date("Y-m-d", strtotime($data[$i]['create_at'])));
-                                            $days = abs($difference/(60*60)/24);
-                                            $month =  floor($days/30);
-                                            $years = floor($month/12);
-                                            echo "<div class='footer__items-general-text'>
-                                            ".$data[$i]['title']."
+                                $sql = "SELECT * FROM news ORDER BY create_at DESC LIMIT 3";
+                                $result = $connection->query($sql);
+                                $currentDate = date('Y-m-d');
+                                while ($data = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
+                                    for ($i = 0; $i < count($data); $i++) {
+                                        $difference = strtotime($currentDate) - strtotime(date("Y-m-d", strtotime($data[$i]['create_at'])));
+                                        $days = abs($difference / (60 * 60) / 24);
+                                        $month =  floor($days / 30);
+                                        $years = floor($month / 12);
+                                        echo "<div class='footer__items-general-text'>
+                                            " . $data[$i]['title'] . "
                                         </div>
                                         <div class='footer__items-general-text2'>
-                                            ".date("d", strtotime($data[$i]['create_at']))." Tháng ".date("m", strtotime($data[$i]['create_at']))." Năm ".date("Y", strtotime($data[$i]['create_at']))."
+                                            " . date("d", strtotime($data[$i]['create_at'])) . " Tháng " . date("m", strtotime($data[$i]['create_at'])) . " Năm " . date("Y", strtotime($data[$i]['create_at'])) . "
                                         </div>";
-                                        }
                                     }
-                                 ?>
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="col l-3 footer__items">
@@ -878,9 +864,8 @@ include('./connection.php');
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="./assets/js/script.js"></script>
         <script>
-
-            $(document).ready(function () {
-                $('#stripe-register').submit(function (e) {
+            $(document).ready(function() {
+                $('#stripe-register').submit(function(e) {
                     e.preventDefault();
                     const fields = e.target.querySelectorAll('.field');
                     var isError = false;
@@ -904,7 +889,7 @@ include('./connection.php');
                             type: form.attr('method'),
                             url: "get_data.php",
                             data: formData,
-                            success: function (response) {
+                            success: function(response) {
                                 console.log(response);
                             }
                         });
@@ -919,8 +904,8 @@ include('./connection.php');
                 });
 
             })
-            $(document).ready(function () {
-                $('.repair').submit(function (e) {
+            $(document).ready(function() {
+                $('.repair').submit(function(e) {
                     e.preventDefault();
                     var form = $(this);
                     var formData = form.serialize();
@@ -930,33 +915,54 @@ include('./connection.php');
                         type: form.attr('method'),
                         url: "get_data.php",
                         data: formData,
-                        success: function (response) {
+                        success: function(response) {
                             alert("Gửi đơn sửa chữa thành công");
                         }
                     });
                 })
-               
-            })
-            var count =4;
 
-            $(document).ready(function(){
-                $('.content__main-button').submit(function (e) {
-                    e.preventDefault();
-                    var formData= {};
-                    count+=4;
-                    formData['counter'] = count;
-                    $.ajax({
-                        method: "POST",
-                        url: "get_data.php",
-                        data: formData,
-                        success: function (response) {
-                            $('.content__main').html(response);
-
-                        }
-                    });
-                })
             })
         </script>
+        <?php
+        echo "
+            <script>
+                var count = 4;
+
+                $(document).ready(function() {
+                    let form_main_button = document.querySelector('.content__main-button');
+                    console.log(form_main_button);
+                    form_main_button.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        var formData = {};
+                        count += 4;
+                        formData['counter'] = count;
+                        $.ajax({
+                            method: 'POST',
+                            url: 'get_data.php',
+                            data: formData,
+                            success: function(response) {
+                                $('.content__main').html(response);
+
+                            }
+                        });
+                    })
+
+                    let num_of_click_btn = 0;
+                    let btn_load_more = document.querySelector('.content__main-button-load-more');
+                    btn_load_more.addEventListener('click', e => {
+                        num_of_click_btn = num_of_click_btn + 1;
+                        if (num_of_click_btn == $num_of_occurs) {
+                            console.log('true');
+                            form_main_button.setAttribute('style', 'display: none !important');
+                        }
+                        console.log(num_of_click_btn)
+                    })
+                    
+                })
+            </script>
+        "
+        ?>
+
 </body>
 
 </html>
