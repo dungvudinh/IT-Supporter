@@ -131,7 +131,7 @@ if(isset($_SESSION['isCloseSidebar']))
                 <span class="nav_text text">Thông báo</span>
             </li>
             </a>
-            <a href ='./management.php?permission=0&ban=0&status=0'>
+            <a href ='./management.php?permission=0&ban=0&status=2'>
             <li class= 'nav_link'>
                 <i class="bx bx-group"></i>
                 <span class="nav_text text">Thành viên</span>

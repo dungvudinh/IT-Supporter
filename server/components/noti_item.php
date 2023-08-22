@@ -460,89 +460,103 @@
             ";
         }
     }
-    if(isset($_POST['search']))
-{
-     $search = $_POST['search']; 
-     if($search == "")
-     {
-        $sql = "SELECT  account_id,avatar, full_name, TenCV, TenBan, date_of_joining, status,email, address, phone_number FROM users INNER JOIN ban  ON  users.MaBan = ban.MaBan INNER  JOIN chuc_vu ON   users.MaCV = chuc_vu.MaCV";
-     }
-     else 
-     {
-        $sql = "SELECT  account_id,avatar, full_name, TenCV, TenBan, date_of_joining, status,email, address, phone_number FROM users INNER JOIN ban  ON  users.MaBan = ban.MaBan INNER  JOIN chuc_vu ON   users.MaCV = chuc_vu.MaCV WHERE full_name LIKE '%". $search."%'";
-     }
-     $result = $connection->query($sql);
-     if(mysqli_num_rows($result) > 0)
-     {
-        while($matrix_array = mysqli_fetch_all($result, MYSQLI_ASSOC))
-        {
-            for($i = 0; $i< count($matrix_array);  $i++)
-            {
-                echo " <li class ='user__item ";
-                echo $matrix_array[$i]['status'] ==0 ? 'disable' :'';
-                echo "'>
-                <div class ='user__infor'>
-                    <span class ='user__avatar'> ";
-                if($matrix_array[$i]["avatar"])
-                    echo "  <img src='./avatar_users/".$matrix_array[$i]["avatar"]."' alt=''>"; 
-                else echo "<img src='./assets/images/no_image.png' alt=''>";     
-                    echo "
-                    </span>
-                    <span class ='user__infor_detail'>
-                        <p class ='user__full-name'>".$matrix_array[$i]["full_name"]."</p>
-                        <p class ='user__permission'>
-                        ".$matrix_array[$i]['TenCV']."
-                    </p>
-                        </span>
-                    </div>
-                    <div class= 'ban'>
-                        <p>
-                        ".$matrix_array[$i]['TenBan']."
-                    </p>
-                    </div>
-                    <div class ='date_of_joing'>
-                        <p>".$matrix_array[$i]['date_of_joining']."</p>
-                    </div>
-                    <div class ='status'>
-                        <p>";
-                        echo $matrix_array[$i]['status'] ==1 ? 'Đang hoạt động' : "Đã rời";
-                        echo "</p>
-                    </div>
-                    <div class ='user__email'>
-                        <p>".$matrix_array[$i]['email']."</p>
-                    </div>
-                    <div class ='user__address'>
-                        <p>".$matrix_array[$i]['address']."</p>
-                    </div>
-                    <div class ='user__sdt'>
-                    <p>".$matrix_array[$i]['phone_number']."</p>
-                </div>
-                    ";
-                    $user_id = $_SESSION['user_id'];
-                    $sql2 ="SELECT avatar, full_name, TenBan, MaCV   FROM users INNER  JOIN  ban ON users.MaBan  = ban.MaBan WHERE account_id  = '".$user_id."'";
-                    $data = $connection->query($sql2);
-                    $user= mysqli_fetch_row($data);
-                    if($user[3] ==1)
-                    echo "<div class ='user__action'>
-                        <form class='my-form'>
-                        <input type='text' value='".$matrix_array[$i]['account_id']."' name='user_id'>
-                        <button type='submit' id= 'submit'>Sửa</button>
-                    </form>
-                    </div>
-                </li>";
-            }
-        }
-     }
+//     if(isset($_POST['search']))
+// {
+//      $search = $_POST['search']; 
+//      if($search == "")
+//      {
+//         $sql = "SELECT  account_id,avatar, full_name, TenCV, TenBan, date_of_joining, status,email, address, phone_number FROM users INNER JOIN ban  ON  users.MaBan = ban.MaBan INNER  JOIN chuc_vu ON   users.MaCV = chuc_vu.MaCV";
+//      }
+//      else 
+//      {
+//         $sql = "SELECT  account_id,avatar, full_name, TenCV, TenBan, date_of_joining, status,email, address, phone_number FROM users INNER JOIN ban  ON  users.MaBan = ban.MaBan INNER  JOIN chuc_vu ON   users.MaCV = chuc_vu.MaCV WHERE full_name LIKE '%". $search."%'";
+//      }
+//      $result = $connection->query($sql);
+//      if(mysqli_num_rows($result) > 0)
+//      {
+//         while($matrix_array = mysqli_fetch_all($result, MYSQLI_ASSOC))
+//         {
+//             for($i = 0; $i< count($matrix_array);  $i++)
+//             {
+//                 echo " <li class ='user__item ";
+//                 echo $matrix_array[$i]['status'] ==0 ? 'disable' :'';
+//                 echo "'>
+//                 <div class ='user__infor'>
+//                     <span class ='user__avatar'> ";
+//                 if($matrix_array[$i]["avatar"])
+//                     echo "  <img src='./avatar_users/".$matrix_array[$i]["avatar"]."' alt=''>"; 
+//                 else echo "<img src='./assets/images/no_image.png' alt=''>";     
+//                     echo "
+//                     </span>
+//                     <span class ='user__infor_detail'>
+//                         <p class ='user__full-name'>".$matrix_array[$i]["full_name"]."</p>
+//                         <p class ='user__permission'>
+//                         ".$matrix_array[$i]['TenCV']."
+//                     </p>
+//                         </span>
+//                     </div>
+//                     <div class= 'ban'>
+//                         <p>
+//                         ".$matrix_array[$i]['TenBan']."
+//                     </p>
+//                     </div>
+//                     <div class ='date_of_joing'>
+//                         <p>".$matrix_array[$i]['date_of_joining']."</p>
+//                     </div>
+//                     <div class ='status'>
+//                         <p>";
+//                         echo $matrix_array[$i]['status'] ==1 ? 'Đang hoạt động' : "Đã rời";
+//                         echo "</p>
+//                     </div>
+//                     <div class ='user__email'>
+//                         <p>".$matrix_array[$i]['email']."</p>
+//                     </div>
+//                     <div class ='user__address'>
+//                         <p>".$matrix_array[$i]['address']."</p>
+//                     </div>
+//                     <div class ='user__sdt'>
+//                     <p>".$matrix_array[$i]['phone_number']."</p>
+//                 </div>
+//                     ";
+//                     $user_id = $_SESSION['user_id'];
+//                     $sql2 ="SELECT avatar, full_name, TenBan, MaCV   FROM users INNER  JOIN  ban ON users.MaBan  = ban.MaBan WHERE account_id  = '".$user_id."'";
+//                     $data = $connection->query($sql2);
+//                     $user= mysqli_fetch_row($data);
+//                     if($user[3] ==1)
+//                     echo "<div class ='user__action'>
+//                         <form class='my-form' method = 'POST'>
+//                         <input type='text' value='".$matrix_array[$i]['account_id']."' name='user_id'>
+//                         <button type='submit' id= 'submit'>Sửa</button>
+//                     </form>
+//                     </div>
+//                 </li>";
+//             }
+//         }
+//      }
      
 
-}
+// }
 ?>
 <script src='./logic/notiItemShow.js'></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
-  // jQuery code to handle the button click event
-
+// edit user in management 
+// console.log(overlay);
+// $(document).ready(function() {
+//     $('.my-form').submit(function(event) {
+//       event.preventDefault();
+//       $.ajax({
+//         type: 'POST',
+//         url: './profile_popup.php',
+//         data: $(this).serialize(),
+//         success: function(response) {
+//             console.log(response);
+//             overlay.html(response);
+//         }
+//       });
+//     });
+//   });
   $(document).ready(function() {
     $('.app-form_submit').submit(function(e) {
         e.preventDefault();     

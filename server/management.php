@@ -100,40 +100,35 @@ if(!isset($_COOKIE['phone_number']))  header("Location:./login.php");
                          $ban_url = $_GET['ban'];
                          $status_url = $_GET['status'];
                          $sql = "SELECT account_id,avatar, full_name, TenCV, TenBan, date_of_joining, status,email, address, phone_number FROM users  INNER JOIN ban  ON  users.MaBan = ban.MaBan INNER  JOIN chuc_vu ON   users.MaCV = chuc_vu.MaCV";
-                         if($permission_url == "0" && $ban_url == "0" && $status_url =="0") 
-                         {
-                            //  if(isset($_POST['search']))
-                            //      $sql .= " WHERE full_name LIKE '%".$_POST['search']."%'";
-                             
-                         }
-                        /*  else if($permission_url != "0")
-                            $sql .= " WHERE users.MaCV = ".(int)$permission_url."";
-                         else if($ban_url != "0")
-                            $sql .= " WHERE  users.MaBan = ".(int)$ban_url."";
-                         else if($status_url !='0')
-                            $sql .= " WHERE status = ".(int)$status_url."";
-                         else 
-                            $sql .= " WHERE users.MaCV = ".(int)$permission_url." AND users.MaBan = ".(int)$ban_url." AND status = ".(int)$status_url.""; */
-                        // Bo loc 
-                        $permission= " users.MaCV = ".(int)$permission_url."" ;
-                         $ban= " users.MaBan = ".(int)$ban_url."";
-                         $status=" status = ".(int)$status_url."";
-                         if($permission_url !=="0" && $ban_url !=="0" && $status_url !=="2"){
-                            $sql .= " WHERE $permission AND $ban AND $status";
-                         }else if($permission_url !=="0" && $ban_url !=="0" && $status_url =="2"){
-                            $sql .= " WHERE $permission AND $ban ";
-                         }else if($permission_url !=="0" && $ban_url =="0" && $status_url !=="2"){
-                            $sql .= " WHERE $permission AND $status ";
-                         }else if($permission_url =="0" && $ban_url !=="0" && $status_url !=="2"){
-                            $sql .= " WHERE $ban AND  $status";
-                         }else if($permission_url !=="0" && $ban_url =="0" && $status_url =="2"){
-                            $sql .= " WHERE $permission" ;
-                         }else if($permission_url =="0" && $ban_url !=="0" && $status_url =="2"){
-                            $sql .= " WHERE $ban" ;
-                         }else if($permission_url =="0" && $ban_url =="0" && $status_url !=="2"){
-                            $sql .= " WHERE $status" ;
-                         }
-    
+                        if(isset($_POST["search"]))
+                        {
+                            //search 
+                            $search = $_POST["search"];
+                            $sql.= " WHERE full_name LIKE '%".$search."%'";
+                        }
+                        else 
+                        {
+                                // Bo loc 
+                            $permission= " users.MaCV = ".(int)$permission_url."" ;
+                            $ban= " users.MaBan = ".(int)$ban_url."";
+                            $status=" status = ".(int)$status_url."";
+                            if($permission_url !=="0" && $ban_url !=="0" && $status_url !=="2"){
+                               $sql .= " WHERE $permission AND $ban AND $status";
+                            }else if($permission_url !=="0" && $ban_url !=="0" && $status_url =="2"){
+                               $sql .= " WHERE $permission AND $ban ";
+                            }else if($permission_url !=="0" && $ban_url =="0" && $status_url !=="2"){
+                               $sql .= " WHERE $permission AND $status ";
+                            }else if($permission_url =="0" && $ban_url !=="0" && $status_url !=="2"){
+                               $sql .= " WHERE $ban AND  $status";
+                            }else if($permission_url !=="0" && $ban_url =="0" && $status_url =="2"){
+                               $sql .= " WHERE $permission" ;
+                            }else if($permission_url =="0" && $ban_url !=="0" && $status_url =="2"){
+                               $sql .= " WHERE $ban" ;
+                            }else if($permission_url =="0" && $ban_url =="0" && $status_url !=="2"){
+                               $sql .= " WHERE $status" ;
+                            }
+                        }
+                    
                             $result = $connection->query($sql);
                          if(mysqli_num_rows($result) > 0)
                          {
@@ -229,6 +224,17 @@ const categoriesLine = document.querySelector('.container .categories__line');
 const buttonNewUser = document.querySelector('header .action .new__btn');
 const overlay = document.querySelector('.layout .overlay');
 const editBtns = document.querySelectorAll('.user__action #submit');
+function exitFunc()
+{
+    overlay.classList.remove('active');
+}
+editBtns.forEach(btn=>{
+    btn.onclick = function()
+    {
+         overlay.classList.add('active');
+    }
+  
+})
 Array.from(categoryItems).forEach((item, index)=>
     item.onclick =function(){
         Array.from(categoryItems).forEach(itemNode=> itemNode.classList.remove('active'));
@@ -236,18 +242,7 @@ Array.from(categoryItems).forEach((item, index)=>
         categoriesLine.style.transform = `translateX(${index * 100}px)`;
     });
 
-    function exitFunc()
-    {
-        overlay.classList.remove('active');
-    }
-    editBtns.forEach(btn=>{
-        btn.onclick = function()
-        {
-             overlay.classList.add('active');
-        }
-      
-    }
-    )
+ 
     const timeoutID= [];
    function searchUser()
    {
@@ -257,15 +252,16 @@ Array.from(categoryItems).forEach((item, index)=>
             timeoutID.pop();
         }
          timeoutID.push( setTimeout(function(){
-            var formData = $('.search-form').serialize();
-            $.ajax({
-                method: 'POST',
-                url: './components/noti_item.php',
-                data: formData,
-                success: function(response) {
-                $('.list__user').html(response);
-                }
-            });
+            $('.search-form').submit();
+            // var formData = $('.search-form').serialize();
+            // $.ajax({
+            //     method: 'POST',
+            //     url: './components/noti_item.php',
+            //     data: formData,
+            //     success: function(response) {
+            //     $('.list__user').html(response);
+            //     }
+            // });
         }, 1000))
    }
    
