@@ -945,26 +945,42 @@ include('./connection.php');
                 })
                
             })
-            var count =4;
-
-            $(document).ready(function(){
-                $('.content__main-button').submit(function (e) {
-                    e.preventDefault();
-                    var formData= {};
-                    count+=4;
-                    formData['counter'] = count;
-                    $.ajax({
-                        method: "POST",
-                        url: "get_data.php",
-                        data: formData,
-                        success: function (response) {
-                            $('.content__main').html(response);
-
-                        }
-                    });
-                })
-            })
         </script>
+
+        <?php 
+            echo "
+            <script>
+                var count = 4;
+                $(document).ready(function() {
+                    let form_main_button = document.querySelector('.content__main-button');
+                    console.log(form_main_button);
+                    form_main_button.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        var formData = {};
+                        count += 4;
+                        formData['counter'] = count;
+                        $.ajax({
+                            method: 'POST',
+                            url: 'get_data.php',
+                            data: formData,
+                            success: function(response) {
+                                $('.content__main').html(response);
+                            }
+                        });
+                    })
+
+                let num_of_click_btn = 0;
+                let btn_load_more = document.querySelector('.content__main-button-load-more');
+                btn_load_more.addEventListener('click', e => {
+                    num_of_click_btn = num_of_click_btn + 1;
+                    if (num_of_click_btn == $num_of_occurs) {
+                        console.log('true');
+                        form_main_button.setAttribute('style', 'display: none !important');
+                    }  
+                })
+                </script>
+                "
+        ?>
 </body>
 
 </html>
