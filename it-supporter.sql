@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2023 at 09:17 AM
+-- Generation Time: Aug 24, 2023 at 05:24 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -41,9 +41,10 @@ INSERT INTO `accounts` (`id`, `account_name`, `password`) VALUES
 (6, '0869370492', '144202'),
 (7, '0869370952', '1'),
 (9, '0869374865', '1'),
-(10, '0869370492', '1'),
+(10, '0813072111', '1'),
 (11, '0355969145', '1'),
-(12, '0355969146', '1');
+(12, '0355969146', '1'),
+(13, '0345059570', '1');
 
 -- --------------------------------------------------------
 
@@ -388,13 +389,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`account_id`, `avatar`, `full_name`, `gender`, `MaCV`, `status`, `email`, `date_of_joining`, `MaBan`, `address`, `MaKhoa`, `phone_number`, `isPay`, `age`, `num_of_noti`, `num_of_repair`, `num_of_budget`) VALUES
-(6, '20230621100653.jpg', 'Vũ Đình Dũng 22', b'0', 1, b'1', 'anhkho881@gmail.com', '2021-03-27', 2, 'Hải Dương', 2, '0869370492', 1, 21, 0, 0, 0),
+(6, '20230621100653.jpg', 'Vũ Đình Dũng', b'0', 1, b'1', 'anhkho881@gmail.com', '2021-03-27', 2, 'Hải Dương', 2, '0869370492', 1, 21, 0, 0, 0),
 (7, '20230615222035.jpg', 'Hoàng Thị Thương', b'0', 1, b'1', 'hoangthuong@gmail.com', '2020-06-03', 2, 'Hải Phòng ', 3, '0869370952', 1, 21, 0, 0, 1),
 (8, '20230615222154.jpg', 'Nguyễn Thị Huyền', b'0', 2, b'0', 'huyennguyen@gmail.com', '2021-06-20', 2, 'Bắc Giang', 1, '0869374974', 0, 20, 11, 0, 1),
 (9, '20230615222307.jpg', 'Đoàn Thảo Trang', b'0', 3, b'1', 'trangdoan@gmail.com', '2022-06-05', 3, 'Thái Bình', 2, '0869374865', 1, 22, 8, 0, 1),
 (10, '', 'Lê Thu Thảo', b'0', 4, b'1', 'thaole@gmail.com', '2020-08-04', 2, 'Hà Nội', 1, '0813072111', 1, 21, 11, 0, 1),
-(11, '', 'Vũ Huy Công ', b'0', 0, b'1', 'congml@gmail.com', '0000-00-00', 1, '', 1, '0355969145', 0, 0, 6, 0, 3),
-(12, '', 'Nguyễn Xuân Tú', b'0', 0, b'0', 'tunguyen@gmail.com', '2023-08-22', 1, '', 1, '0355969146', 0, 0, 1, 0, 3);
+(11, '20230824210807.webp', 'Vũ Huy Công ', b'0', 1, b'1', 'congvu@gmail.com', '2020-08-13', 1, 'Nam Định', 1, '0355969145', 0, 21, 0, 0, 0),
+(12, '20230824210841.jpg', 'Vũ Mạnh Dũng', b'1', 4, b'1', 'dungvu@gmail.com', '2023-08-22', 3, 'Hà Nội', 1, '0355969146', 0, 0, 0, 0, 0),
+(13, '20230824200819.jpg', 'Nguyễn Thùy Linh', b'0', 1, b'1', 'linhnguyen@gmail.com', '2023-08-24', 2, 'Thanh Hóa', 1, '0345059570', 0, 21, 0, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -482,7 +484,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `app_form_client`
@@ -548,7 +550,7 @@ ALTER TABLE `su_kien`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
