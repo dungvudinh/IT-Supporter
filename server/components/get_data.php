@@ -207,15 +207,15 @@ if(isset($_FILES['image-input']))
         $fileImage = ", avatar = '".$imageUrl."'";
         $result = $connection->query("SELECT avatar FROM users WHERE account_id = ".$_SESSION['user_id']."");
         $data = mysqli_fetch_row($result);
-        if (file_exists("../avatar_users/".$data[0]."")) {
-            if (unlink("../avatar_users/".$data[0]."")) {
-                echo '<script>console.log(Image deleted successfully.);</script>';
-            } else {
-                echo '<script>console.log(Failed to delete the image.);</script>';
-            }
-        } else {
-            echo 'Image not found.';
-        }
+        // if (file_exists("../avatar_users/".$data[0]."")) {
+        //     if (unlink("../avatar_users/".$data[0]."")) {
+        //         echo '<script>console.log(Image deleted successfully.);</script>';
+        //     } else {
+        //         echo '<script>console.log(Failed to delete the image.);</script>';
+        //     }
+        // } else {
+        //     echo 'Image not found.';
+        // }
         move_uploaded_file($tempFile , $folder);
       }
       else $fileImage = "";

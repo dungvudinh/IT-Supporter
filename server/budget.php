@@ -132,18 +132,7 @@ if(!isset($_COOKIE['phone_number']))  header("Location:./login.php");
                                       else if($days <=365) echo $month." tháng trước";
                                       else echo $years." năm trước";
                                       echo  "</small></p>";
-                                      if($data[$i]['isConfirmed'] == 0)
-                                      {
-                                        echo "
-                                        <form class='confirm_expenditure-form' method ='POST'>
-                                        <input style='display:none;' name='expenditure-id' value='".$data[$i]['id']."'/>
-                                        <button type='submit' class='confirm_expenditure-btn'>Xác nhận</button>
-                                        </form>";
-                                      }
-                                      else 
-                                      {
-                                        echo "<button>Đã xác nhận</button>";
-                                      }
+                                    
                                  echo " </div>
                                   
                               </div>

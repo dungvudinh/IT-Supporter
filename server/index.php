@@ -75,7 +75,12 @@ if(!isset($_COOKIE['phone_number']))  header("Location:./login.php");
                                             <input type='text' name='noti_input'  value='afc' style='display:none;' >
                                             <button type='submit' value='Submit'>Đơn Ứng Tuyển Mới</button>
                                         </form>
+                                        <form  class ='noti_item'  method='POST'>
+                                        <input type='text' name='noti_input' value='event' style='display:none;'>
+                                        <button type='submit' value='Submit'>Sự Kiện Mới</button>
+                                        </form>
                                         ";
+
                                     }
                                 }
                                 else 
