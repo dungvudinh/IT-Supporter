@@ -403,9 +403,17 @@ include('./connection.php');
                     } 
                 ?>
             </div>
-            <form class="content__main-button" method= "POST">
-                    <button  type='submit'>Load more</button>
-                </form>
+            <?php
+            $sql = "SELECT * FROM news";
+            $result = $connection->query($sql);
+            $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            $num_of_occurs = 0;
+            if (count($data) % 4 == 0) $num_of_occurs = floor(count($data) / 4) - 1;
+            else $num_of_occurs = floor(count($data) / 4);
+            ?>
+            <form class='content__main-button' method='POST'>
+                <button type='submit' class="content__main-button-load-more">Load more</button>
+            </form>
 
             <div id="container__review" class="content__review">
                 <div class="content__review-titles">
